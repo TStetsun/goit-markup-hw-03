@@ -134,6 +134,7 @@ a {
 .hero {
   background-color: var(--bg-black-color);
   /* padding: 200px 452px 280px 452px; */
+  text-align: center;
 }
 .hero-title {
   font-weight: 900;
@@ -145,7 +146,7 @@ a {
   color: var(--text-color-major-white);
   margin-bottom: 30px;
   width: 696px;
-  /* margin: 0, auto; */
+  margin: 0 auto;
 }
 .hero-button {
   font-family: inherit;
@@ -159,7 +160,7 @@ a {
   cursor: pointer;
   border: 0;
   border-radius: 4px;
-  /* margin: 0, auto; */
+  margin-top: 30px;
 }
 .hero-button:hover,
 .hero-button:focus {
