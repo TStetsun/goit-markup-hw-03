@@ -25,6 +25,12 @@ ul {
   padding: 0;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   background-color: var(--text-color-major-white);
@@ -42,7 +48,7 @@ a {
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-  margin: 0, auto;
+  margin: 0 auto;
 }
 
 .section {
@@ -72,7 +78,9 @@ a {
 }
 
 /*-------- HEADER --------*/
-
+.header {
+  border-bottom: 1px solid #ececec;
+}
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: bold;
@@ -89,17 +97,17 @@ a {
 }
 .header-container {
   display: flex;
-}
-.header-navigation {
-  display: flex;
   align-items: center;
 }
+/* .header-navigation {
+  display: flex;
+  align-items: center;
+} */
 .header-list {
   display: flex;
 }
 .header-contacts {
   display: flex;
-  align-items: center;
 }
 .header-contacts-wraper {
   display: flex;
@@ -112,6 +120,9 @@ a {
   letter-spacing: 0.02em;
   padding-top: 32px;
   padding-bottom: 32px;
+  /* margin-right: 50px; */
+}
+.item {
   margin-right: 50px;
 }
 .nav {
@@ -133,7 +144,7 @@ a {
 /* hero */
 .hero {
   background-color: var(--bg-black-color);
-  /* padding: 200px 452px 280px 452px; */
+  padding: 200px;
   text-align: center;
 }
 .hero-title {
@@ -144,9 +155,9 @@ a {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--text-color-major-white);
-  margin-bottom: 30px;
   width: 696px;
   margin: 0 auto;
+  /* margin-bottom: 30px; */
 }
 .hero-button {
   font-family: inherit;
@@ -160,6 +171,7 @@ a {
   cursor: pointer;
   border: 0;
   border-radius: 4px;
+  padding: 10px 32px;
   margin-top: 30px;
 }
 .hero-button:hover,
@@ -168,8 +180,14 @@ a {
 }
 
 /* Features */
+.features-container {
+  padding-top: 0;
+}
 .features-list {
   display: flex;
+}
+.features-item {
+  min-width: 270px;
 }
 .features-item + .features-item {
   margin-left: 30px;
@@ -195,7 +213,7 @@ a {
 }
 .presentation-list {
   display: flex;
-  align-items: flex-start;
+  /* align-items: flex-start; */
 }
 .presentation-item + .presentation-item {
   margin-left: 30px;
@@ -209,14 +227,18 @@ a {
   margin-bottom: 50px;
 }
 .team-list {
-  background-color: var(--text-color-major-white);
   display: flex;
-  margin-left: -30px;
+  /* margin-left: -30px; */
 }
 .team-item {
-  width: calc(100% / 4 -30px);
+  background-color: var(--text-color-major-white);
+  width: calc(100% / 4);
   margin-left: 30px;
 }
+.team-item:first-child {
+  margin-left: 0;
+}
+
 .team-employee {
   font-weight: 500;
   font-size: 16px;
@@ -224,7 +246,7 @@ a {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--text-color-major-dark);
-  margin-top: 30px;
+  margin-bottom: 10px;
 }
 .team-role {
   font-size: 16px;
@@ -232,8 +254,11 @@ a {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--text-color-grey);
-  margin-top: 10px;
+  /* margin-top: 10px; */
   /* margin-bottom: 30px; */
+}
+.description-cart {
+  padding: 30px 0px;
 }
 
 /*-------- FOOTER --------*/
@@ -242,6 +267,13 @@ a {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+.footer-logo {
+  display: block;
+  margin-right: 0;
+  margin-bottom: 20px;
+  padding: 0;
+}
+
 .logo-text-footer {
   color: var(--text-color-major-white);
 }
@@ -270,6 +302,7 @@ a {
 .filters-list {
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
 }
 .filters-btn {
   font-family: "Roboto", sans-serif;
@@ -283,12 +316,10 @@ a {
   cursor: pointer;
   border: 0;
   border-radius: 4px;
-  margin-top: 174px;
-}
-.filters-btn {
+  padding: 6px 22px;
   margin-right: 8px;
-  margin-bottom: 50px;
 }
+
 .current-btn {
   background-color: var(--logo-color-blue);
   color: var(--text-color-major-white);
@@ -301,13 +332,17 @@ a {
 /* works */
 .works-list {
   display: flex;
-  margin-left: -30px;
   flex-wrap: wrap;
 }
 .works-item {
-  width: calc(100% / 3 -30px);
   margin-left: 30px;
-  border-bottom: 1px solid #eeeeee;
+  margin-bottom: 30px;
+}
+.works-item:nth-child(3n + 1) {
+  margin-left: 0;
+}
+.description-work {
+  padding: 20px 24px;
 }
 .works-title {
   font-weight: 700;
@@ -315,13 +350,11 @@ a {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--text-color-major-dark);
-  margin-top: 20px;
+  margin-bottom: 4px;
 }
 .works-title-pre {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
   color: var(--text-color-grey);
-  margin-top: 4px;
-  margin-bottom: 20px;
 }
